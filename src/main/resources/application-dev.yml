@@ -1,0 +1,50 @@
+# port
+server:
+  port: 80
+
+# datasource
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///app?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  mail:
+    host: smtp.126.com
+    username: datao119@163.com
+    password: datao119
+
+
+
+
+# mybatis
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.qf.app.pojo
+
+#pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+# show sql
+logging:
+  level:
+    com.qf.app.mapper: DEBUG
+
+
+
+
+
+
+
+
+
+
+

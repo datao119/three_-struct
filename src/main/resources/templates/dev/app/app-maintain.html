@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>APP维护页面</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}"  media="all">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+<!--    引入头部-->
+    <div th:replace="~{dev/app/common :: header}"></div>
+<!--    引入左侧导航-->
+    <div th:replace="~{dev/app/common :: left}"></div>
+<!--    主体区域-->
+    <div class="layui-body">
+
+<!--        app的查询条件表单-->
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+            <legend>app的查询条件</legend>
+        </fieldset>
+
+        <form class="layui-form" action="">
+
+<!--            软件名称 所属平台 APP状态-->
+            <div class="layui-form-item">
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">软件名称:</label>
+                    <div class="layui-input-inline">
+                        <input type="text" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">所属平台:</label>
+                    <div class="layui-input-inline">
+                        <select  class="layui-input">
+                            <option>--请选择--</option>
+                            <option th:each="flatForm : ${flatFormList}" th:value="${flatForm.valueId}" th:text="${flatForm.valueName}"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">APP状态:</label>
+                    <div class="layui-input-inline">
+                        <select  class="layui-input">
+                            <option>--请选择--</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+<!--            一级分类,二级分类,三级分类-->
+            <div class="layui-form-item">
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">一级分类:</label>
+                    <div class="layui-input-inline">
+                        <select  class="layui-input">
+                            <option>--请选择--</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">二级分类:</label>
+                    <div class="layui-input-inline">
+                        <select  class="layui-input">
+                            <option>--请选择--</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">三级分类:</label>
+                    <div class="layui-input-inline">
+                        <select  class="layui-input">
+                            <option>--请选择--</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+<!--            查询按钮和重置按钮-->
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" type="button" >查询</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+
+        </form>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+<!--    引入底部-->
+    <div th:replace="~{dev/app/common :: footer}"></div>
+</div>
+<script th:src="@{/layui/layui.js}" charset="utf-8"></script>
+<script>
+    //JavaScript代码区域
+    layui.use(['element','form'], function(){
+        var element = layui.element;
+        var form = layui.form;
+        // layui其他功能
+    });
+</script>
+</body>
+</html>
