@@ -12,26 +12,17 @@ package com.qf.app2.constant;
 public interface AppConstant{
     // 开发者模块用户注册页面
     String DEV_USER_REGISTER = "dev/user/register";
-
-
     // 开发者模块用户登录页面
     String DEV_USER_LOGIN = "dev/user/login";
-
-
     // 开发者模块用户发送激活邮件页面
     String DEV_USER_ACTIVE = "dev/user/active";
-
     // 开发者用户信息在session中的key
     String DEV_SESSION_KEY = "devUser";
-
     // 加密次数
     int ENCRYPTION_NUMBER = 1024;
-
     //==================================================================
-
     // 开发者模块的APP首页
     String DEV_APP_INDEX = "dev/app/index";
-
     // 开发者模块的APP维护页面
     String DEV_APP_MAINTAIN = "dev/app/app-maintain";
 }

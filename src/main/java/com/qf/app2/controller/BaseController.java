@@ -1,5 +1,7 @@
 package com.qf.app2.controller;
 
+import org.springframework.stereotype.Controller;
+
 /**
  * 项目日期：2019-08-03-8:22 AM
  * 简单描述：
@@ -9,7 +11,7 @@ package com.qf.app2.controller;
  * <p>
  * 但是一旦超越了自我就能获得无可取代的钢之心
  **/
-
+@Controller
 public class BaseController{
 
 }

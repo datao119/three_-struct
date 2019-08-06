@@ -17,7 +17,7 @@ import tk.mybatis.mapper.common.Mapper;
  **/
 public interface DevUserMapper extends Mapper<DevUser>{
 
-    @Select("select count(*) from dev_user where dev_username=#{devusername}")
+    @Select("select count(*) from dev_user where dev_username=#{devUsername}")
     Integer findByDevUsername(@Param("devUsername") String devUsername);
 
     //删除state=0 并且创建时间超过三天的

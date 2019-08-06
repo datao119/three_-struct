@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.mail.MessagingException;
 import java.util.UUID;
 
-import static com.qf.app2.constant.AppConstant.ENCRYPTION_NUMBER;
+import static com.qf.app2.constant.AppConstant.*;
 
 /**
  * 项目日期：2019-08-02-10:20 PM

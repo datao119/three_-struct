@@ -57,6 +57,7 @@
     function register(){
         //1. 获取表单项中的全部参数.
         var data = $("#registerForm").serialize();
+        console.data
         //2. 发送ajax请求.
         $.ajax({
             url: "/dev/user/register",
@@ -75,9 +76,6 @@
             }
         });
     }
-
-
-
 
     // 声明checkUsername函数
     function checkUsername(obj){
@@ -109,7 +107,7 @@
                 }
             },
             error: function(){
-                alert("服务器爆炸,请稍后再试!");
+                alert("服务器爆炸,请稍后再试!000000000000000000000000000000000");
             }
         });
     }
